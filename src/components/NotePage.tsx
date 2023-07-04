@@ -2,10 +2,10 @@ import { Box, Grid, GridItem, Show } from "@chakra-ui/react";
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 import NavBar from "./header/NavBar";
-import NoteHeading from "./NoteHeading";
+import NoteHeading from "./notesGrid/NoteHeading";
 import NotesList from "./notesList/NotesList";
 import { Note } from "../hooks/useNotes";
-import NoteGrid from "./NoteGrid";
+import NoteGrid from "./notesGrid/NoteGrid";
 
 export interface NoteQuery {
   searchText: string;

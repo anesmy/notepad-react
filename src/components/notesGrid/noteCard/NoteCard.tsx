@@ -1,4 +1,4 @@
-import { Note } from "../hooks/useNotes";
+import { Note } from "../../../hooks/useNotes";
 import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
 
 interface Props {
@@ -10,7 +10,7 @@ const NoteCard = ({ note }: Props) => {
     <Card>
       <CardBody>
         <HStack justifyContent="space-between" marginBottom={3}></HStack>
-        <Heading fontSize="1.3rem" textAlign="left">
+        <Heading fontSize="1.3rem" textAlign="center">
           {note.title}
         </Heading>
       </CardBody>
