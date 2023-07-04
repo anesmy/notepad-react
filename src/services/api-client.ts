@@ -1,0 +1,7 @@
+import axios from "axios";
+
+export default axios.create({
+  baseURL: "http://localhost:8080",
+  //withCredentials: false,
+})
+//mode: "no-cors" as RequestMode,

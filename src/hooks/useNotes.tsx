@@ -1,19 +1,21 @@
-//import useData from "./useData";
+import { NoteQuery } from "../components/NotePage";
+import useData from "./useData";
 
 export interface Note {
-  id: number;
+  noteID: number;
   title: string;
   content: string;
 }
 
-// const useGames = (gameQuery: GameQuery) => 
-//   useData<Game>("/games", {
-//     params: { 
-//       genres: gameQuery.genre?.id, 
-//       parent_platforms: gameQuery.platform?.id,
-//       ordering: gameQuery.sortOrder,
-//       search: gameQuery.searchText,
-//     }}, 
-//     [gameQuery]);
+const useNotes = (noteQuery: NoteQuery) =>
+  useData<Note>(
+    "/",
+    {
+      // params: {
+      //   search: noteQuery.searchText,
+      // },
+    }
+    //[noteQuery]
+  );
 
-//export default useNotes;
+export default useNotes;
