@@ -11,9 +11,13 @@ const NoteCardContainer = ({ children, id }: Props) => {
 
   return (
     <Box
-      borderRadius={10}
+      borderRadius={20}
       overflow="hidden"
-      transform={isRotated ? "rotate(5deg)" : "rotate(0deg)"}
+      transform={isRotated ? "rotate(5deg)" : "rotate(-2deg)"}
+      width="80%"
+      borderColor="Highlight"
+      borderWidth="1px"
+      backgroundColor="rgb(32, 32, 32)"
     >
       {children}
     </Box>
