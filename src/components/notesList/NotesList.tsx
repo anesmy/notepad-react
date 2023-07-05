@@ -1,14 +1,15 @@
 import {
   HStack,
   List,
-  Image,
   ListItem,
   Spinner,
   Button,
   Heading,
+  Box,
 } from "@chakra-ui/react";
 import useNotes, { Note } from "../../hooks/useNotes";
 import { NoteQuery } from "../NotePage";
+import { TriangleDownIcon } from "@chakra-ui/icons";
 
 interface Props {
   onSelectNote: (note: Note) => void;
@@ -30,8 +31,13 @@ const NotesList = ({ selectedNote, onSelectNote, noteQuery }: Props) => {
       <List>
         {data.map((note) => (
           <ListItem key={note.noteID} paddingY="5px">
-            <HStack>
-              <Image boxSize="30px" borderRadius={9} objectFit="cover" />
+            <HStack color="Highlight">
+              <Box
+                boxSize="30px"
+                opacity={note.noteID === selectedNote?.noteID ? "0.9" : "0.3"}
+              >
+                <TriangleDownIcon />
+              </Box>
               <Button
                 textAlign="left"
                 whiteSpace="normal"
