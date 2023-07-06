@@ -2,10 +2,10 @@ import {
   HStack,
   List,
   ListItem,
-  Spinner,
   Button,
   Heading,
   Box,
+  SkeletonText,
 } from "@chakra-ui/react";
 import useNotes, { Note } from "../../hooks/useNotes";
 import { NoteQuery } from "../NotePage";
@@ -21,7 +21,16 @@ const NotesList = ({ selectedNote, onSelectNote, noteQuery }: Props) => {
   const { data, error, isLoading } = useNotes(noteQuery);
 
   if (error) return null;
-  if (isLoading) return <Spinner />;
+  if (isLoading)
+    return (
+      <SkeletonText
+        mt="4"
+        mr="3"
+        noOfLines={14}
+        spacing="9"
+        skeletonHeight="2.5"
+      />
+    );
 
   return (
     <>

@@ -7,7 +7,7 @@ interface Props {
 }
 
 const NoteCardContainer = ({ children, id }: Props) => {
-  const isRotated = id ? id % 2 == 1 : false;
+  const isRotated = id ? id % 3 == 1 : false;
 
   return (
     <Box
