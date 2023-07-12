@@ -22,7 +22,7 @@ const NoteCard = ({ note }: Props) => {
   };
 
   if (error) {
-    return { error };
+    return <div>Error: {error.message}</div>;
   }
 
   return (

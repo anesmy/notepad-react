@@ -15,7 +15,7 @@ const NoteCardContainer = ({ children, id }: Props) => {
       overflow="hidden"
       transform={isRotated ? "rotate(5deg)" : "rotate(-2deg)"}
       width="80%"
-      borderColor="Highlight"
+      borderColor="#d8edfd"
       borderWidth="1px"
       backgroundColor="rgb(32, 32, 32)"
     >
