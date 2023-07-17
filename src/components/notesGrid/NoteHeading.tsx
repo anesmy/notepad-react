@@ -8,7 +8,7 @@ interface Props {
 
 const GameHeading = ({ noteQuery }: Props) => {
   const heading = `
-  ${noteQuery.note?.title || "My"} Note
+  ${noteQuery.note?.title || "My"}
   `;
 
   return (
@@ -16,8 +16,9 @@ const GameHeading = ({ noteQuery }: Props) => {
       <Helmet>
         <title> {heading} · Notepad</title>
       </Helmet>
-      <Heading as="h1" marginY={5} fontSize="5xl" textAlign="left">
+      <Heading as="h1" marginY={5} marginX={8} fontSize="5xl" textAlign="left">
         {heading}
+        {<i>Note</i>}
       </Heading>
     </>
   );

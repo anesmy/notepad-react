@@ -18,6 +18,7 @@ const NoteCardContainer = ({ children, id }: Props) => {
       borderColor="#d8edfd"
       borderWidth="1px"
       backgroundColor="rgb(32, 32, 32)"
+      boxShadow="dark-lg"
     >
       {children}
     </Box>

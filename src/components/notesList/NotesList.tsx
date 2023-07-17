@@ -34,7 +34,12 @@ const NotesList = ({ selectedNote, onSelectNote, noteQuery }: Props) => {
 
   return (
     <>
-      <Heading fontSize="2xl" marginBottom={3} textAlign="left">
+      <Heading
+        fontSize="2xl"
+        marginBottom={3}
+        textAlign="left"
+        color="Highlight"
+      >
         Notes
       </Heading>
       <List>
