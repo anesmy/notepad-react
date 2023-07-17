@@ -1,10 +1,10 @@
-import { IconButton, SimpleGrid, Text } from "@chakra-ui/react";
+import { SimpleGrid, Text } from "@chakra-ui/react";
 import { NoteQuery } from "../NotePage";
 import useNotes from "../../hooks/useNotes";
 import NoteCard from "./noteCard/NoteCard";
 import NoteCardContainer from "./noteCard/NoteCardContainer";
 import NoteCardSkeleton from "./noteCard/NoteCardSkeleton";
-import { AddIcon } from "@chakra-ui/icons";
+import AddNote from "./AddNote";
 
 interface Props {
   noteQuery: NoteQuery;
@@ -22,15 +22,7 @@ const NoteGrid = ({ noteQuery }: Props) => {
       padding="50px 40px 10px 30px"
       spacing={12}
     >
-      <IconButton
-        aria-label="Add note"
-        icon={<AddIcon />}
-        variant="outline"
-        fontSize="20px"
-        height="90%"
-        margin=" 0 18% 0 0"
-        borderRadius="20"
-      />
+      <AddNote />
       {isLoading &&
         skeletons.map((skeleton) => (
           <NoteCardContainer key={skeleton}>
